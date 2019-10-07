@@ -1,0 +1,61 @@
+<HTML>
+    <HEAD>
+    <TITLE>Homework</TITLE>
+    </HEAD>
+    
+    <BODY>
+        Name:
+        <input type="text" id="name"/>
+        Age:
+        <input type="text" id="age"/>
+        
+        <input onclick="addRow();" type = "button" value="ADD"  />
+        <br/>
+    <hr/>
+    <h1>Profiles</h1>
+    <table id="profile">
+      <tr>
+        <th>Name</th>
+        <th>age</th>
+        <th>Image</th>
+      </tr>
+
+    </table>
+   
+    
+
+    <hr/>
+    
+    <script type="text/javascript">
+    
+
+    function addRow(){
+    
+      var table = document.getElementById("profile");
+      var newRow = table.insertRow();
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+      var cell3 = newRow.insertCell(2);
+
+
+    
+      cell1.innerHTML = document.getElementById("name").value;
+      cell2.innerHTML = document.getElementById("age").value;
+
+        //Add image by pointing it to the male or female images
+        //I didn't add the if logic, but you can add it here
+        //create a new image tag using javascript, attach the male or female image
+        //and append it to the cell
+      var img = document.createElement('img'); 
+      img.src =  'male.png'; 
+      cell3.appendChild(img); 
+   
+    
+    }
+    
+    </script>
+    
+    </BODY>
+    
+    
+    </HTML>
